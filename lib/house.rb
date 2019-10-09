@@ -18,4 +18,13 @@ class House
     @rooms << room
   end
 
+  def find_room_by_category(room_category)
+  list_of_rooms = []
+    rooms.each do |room|
+      if rooms.category == room_category
+        list_of_rooms << room
+      end
+    end
+    list_of_rooms
+  end
 end

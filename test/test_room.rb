@@ -8,6 +8,10 @@ class RoomTest < Minitest::Test
     @room1 = Room.new(:bedroom, 10, 13)
   end
 
+  def test_if_room_exist
+    assert_instance_of Room, @room1
+  end
+
   def test_if_room_has_category
     assert_equal :bedroom, @room1.category
   end

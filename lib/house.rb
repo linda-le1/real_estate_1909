@@ -1,5 +1,5 @@
 require_relative "room"
-
+# require 'pry'
 
 class House
 
@@ -26,5 +26,10 @@ class House
       end
     end
     list_of_rooms
+  end
+
+  def calculate_house_area
+    @rooms.flatten
+    puts @rooms.length.sum * @rooms.width.sum
   end
 end

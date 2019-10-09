@@ -13,8 +13,7 @@ class House
     @rooms =[]
   end
 
-  def add_room (room_category, length, width)
-  room = [room_category, length, width]
+  def add_room(room)
     @rooms << room
   end
 
@@ -29,7 +28,6 @@ class House
   end
 
   def calculate_house_area
-    @rooms.flatten
-    puts @rooms.length.sum * @rooms.width.sum
+    @rooms.length.sum * @rooms.width.sum
   end
 end

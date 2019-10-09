@@ -28,6 +28,6 @@ class House
   end
 
   def calculate_house_area
-    @rooms.length.sum * @rooms.width.sum
+    @rooms.room.calculate_room_area.sum
   end
 end

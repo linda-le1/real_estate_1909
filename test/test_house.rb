@@ -11,7 +11,7 @@ class TestHouse < Minitest::Test
     @room_2 = Room.new(:bedroom, 11, 15)
     @room_3 = Room.new(:living_room, 25, 15)
     @room_4 = Room.new(:basement, 30, 41)
-    @rooms = [[@room_1], [@room_2], [@room_3], [@room_4] ]
+    @rooms = [@room_1, @room_2, @room_3, @room_4]
   end
 
   def test_if_house_exists
@@ -48,5 +48,6 @@ class TestHouse < Minitest::Test
   def test_area_of_house
     house_area = (@room_1.calculate_room_area+@room_2.calculate_room_area+@room_3.calculate_room_area+@room_4.calculate_room_area)
     assert_equal 1900, house_area
+  #  assert_equal 1900, @house.calculate_house_area
   end
 end
